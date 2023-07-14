@@ -1,63 +1,93 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
-    background-color: black;
-    color: white;
     list-style: none;
+    font-family: "rubik";
 }
 
-.logo-svg-bistro{
-    width: 40%;
-    margin-top: 2rem;
+.logo{
+    max-width: 5rem;
+    background-color: black;
 }
 
-.nav-container{
+
+.nav-list{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    gap: 1rem;
 }
 
-
-
-.fa-bars{
-    font-size: 3rem;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    cursor: pointer;
-    transition: .3s all ;
-}
-
-.fa-bars:hover{  
-   color: rgb(204, 110, 110);
-}
-
-.click{
-    animation: reducir .2s ease-in-out;
-}
-
-.ul-navegador{
-    height: 60vh;
+header{
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: brown;
+}
 
+.nav-list li a{
+    text-decoration: none;
+    color: black;
+}
+
+.abrir-menu{
+    display: none;
+}
+
+@media screen and (max-width : 550px){
+    
+    .abrir-menu,
+    .cerrar-menu{
+        display: block;
+        border: 0;
+        font-size: 1.2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu{
+        
+    }
+    
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(67, 69, 194, 0.904);
+        padding: 2rem;
+        bottom: 0;
+        box-shadow: 0 0 0 100vmax rgba(0 , 0 , 0 , 0.5);
+
+        opacity: 0;
+        visibility: hidden;
+        transition: all .5s;
+    }
+
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a{
+        text-decoration: none;
+        color: white;
+    }
+    
 }
 
 
-@keyframes reducir {
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(0.80);
-    }
-    100%{
-        transform: scale(1);
-    }
+@media screen and (max-width : 550px){
+
 }

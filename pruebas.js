@@ -1,5 +1,12 @@
-const boton = document.querySelector('#button-menu');
+const nav = document.querySelector("#nav") ;
+const abrir = document.querySelector("#abrir") ;
+const cerrar = document.querySelector("#cerrar") ;
 
-boton.addEventListener( "click" , () =>{
-    boton.classList.toggle("click")
+
+abrir.addEventListener("click" , ()=>{
+    nav.classList.add("visible");
+})
+
+cerrar.addEventListener("click" , () =>{
+    nav.classList.remove("visible")
 })
