@@ -86,4 +86,22 @@ nav{
 .visible{
     opacity: 1;
     visibility: visible;
+    animation: aparecer ;
+}
+
+@keyframes aparecer {
+    from{
+        transform:translateX(-500px)
+    }
+    to{
+        transform: translateX(0px);
+    }
+    
+}
+
+@media screen and (min-width:550px ) {
+    header{
+        background-color: rgb(170, 26, 26);
+        padding: 2rem;
+    }
 }

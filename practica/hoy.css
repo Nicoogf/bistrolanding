@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style:none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo{
+    background-color: black;
+    width: 150px;
+}
+
+
+header{
+    background-color: black;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lista{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: blueviolet;
+    padding: 5rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0,  0.5);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.boton-abrir{
+    padding: 1.5rem;
+    border-radius: 50%;
+    border:none;
+    background-color: red;
+    color: white;
+}
+
+.boton-salir{
+    padding: 1.5rem;
+    border-radius: 50%;
+    border:none;
+    background-color: red;
+    color: white;
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+}
